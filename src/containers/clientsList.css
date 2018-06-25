@@ -1,0 +1,16 @@
+.listClients li{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+}
+.listClients div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+.listClients .avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+}
