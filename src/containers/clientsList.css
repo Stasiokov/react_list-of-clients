@@ -1,7 +1,23 @@
+
+.listClients{
+    height: calc(100vh - 36px);
+    overflow: auto;
+    margin-left: 20px;
+    box-sizing: border-box;
+    padding-right: 20px;
+}
 .listClients li{
     display: flex;
     flex-direction: row;
     border: 2px solid black;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-right-width: 3px;
+    padding: 5px;
+}
+.listClients .selectClient{
+    border-width: 3px;
+    border-right: none;
 }
 .listClients div{
     display: flex;

@@ -1,5 +1,6 @@
 .findClient{
-    width: 100%;
+    width: calc(100% - 40px);
     box-sizing: border-box;
     height: 36px;
+    margin-left: 20px;
 }

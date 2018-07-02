@@ -6,7 +6,7 @@ class Details extends Component {
     render() {
         if (!this.props.client) {
             return (
-                <p>Click client</p>
+                <div className="details">Click client</div>
             )
         }
         return (

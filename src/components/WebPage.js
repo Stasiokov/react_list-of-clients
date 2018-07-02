@@ -8,7 +8,7 @@ import './webPage.css'
 
 const WebPage = () => (
     <div className="container">
-        <div>
+        <div className="left">
             <FilterClient/>
             <ClientsList/>
         </div>

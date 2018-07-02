@@ -11,7 +11,7 @@ class ClientsList extends Component {
     showList() {
         return this.props.clients.map((client) => {
             return (
-                <li onClick={() => this.props.select(client)}
+                <li onClick={() => this.props.select(client)} className={(JSON.stringify(this.props.actClient) === JSON.stringify(client) ? "selectClient" : "notSelectClient")}
                     key={client.contact.email}>
                     <img className="avatar" src={client.general.avatar} alt=""/>
                     <div>
@@ -33,13 +33,14 @@ class ClientsList extends Component {
 }
 function mapStateToProps(state) {
     return {
-        clients: state.clients.filter(client => f(state.clientFilter, client))
+        clients: state.clients.filter(client => f(state.clientFilter, client)),
+        actClient: state.activeClient
     }
 }
 function f(find, arr) {
     for (let i in arr) {
         for (let k in arr[i]) {
-            if (arr[i][k].includes(find))return true;
+            if (arr[i][k].toLowerCase().includes(find.toLowerCase()))return true;
         }
     }
 }
